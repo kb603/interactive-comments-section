@@ -3,37 +3,38 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ChevronUp, ChevronDown } from "lucide-react";
 
-export default function MainCard() {
+export default function SubCard() {
   return (
-    <Card className="mx-auto mt-8 max-w-3xl p-6">
-      <div className="flex flex-col gap-6 md:flex-row">
+    <Card className="ml-20 mt-4 max-w-2xl p-6">
+      <div className="ml-10 flex flex-col gap-6 md:flex-row">
         <div className="flex flex-row items-center gap-4 md:flex-col md:gap-2">
           <Button variant="ghost" size="icon" className="h-8 w-8">
             <ChevronUp className="h-4 w-4" />
           </Button>
-          <span className="text-sm font-medium">12</span>
+          <span className="text-sm font-medium">5</span>
           <Button variant="ghost" size="icon" className="h-8 w-8">
             <ChevronDown className="h-4 w-4" />
           </Button>
         </div>
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Avatar>
+            <div className="flex items-center space-x-3">
+              <Avatar className="h-8 w-8">
                 <AvatarImage src="/placeholder.svg" alt="@username" />
                 <AvatarFallback>UN</AvatarFallback>
               </Avatar>
               <div>
-                <p className="font-semibold">amyrobson</p>
-                <p className="text-sm text-muted-foreground">1 month ago</p>
+                <p className="text-sm font-semibold">ramsesmiron</p>
+                <p className="text-xs text-muted-foreground">1 week ago</p>
               </div>
             </div>
-            <Button variant="ghost">Reply</Button>
+            <Button variant="ghost" size="sm">
+              Reply
+            </Button>
           </div>
-          <p className="text-muted-foreground">
-            Impressive! Though it seems the drag feature could be improved. But
-            overall it looks incredible. You&apos;ve nailed the design and the
-            responsiveness at various breakpoints works really well.
+          <p className="text-sm text-muted-foreground">
+            I couldn&apos;t agree more with this. Everything looks incredible.
+            Great job!
           </p>
         </div>
       </div>
