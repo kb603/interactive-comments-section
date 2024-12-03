@@ -1,19 +1,26 @@
+import Image from "next/image";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
 export default function CommentSection() {
   return (
-    <div className="flex-1 space-y-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <div className="h-10 w-10 rounded-full bg-gray-200" />
-          <div>
-            <p className="font-semibold">Username</p>
-            <p className="text-sm text-gray-500">1 hour ago</p>
-          </div>
+    <Card className="mt-4 p-4 sm:p-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-4">
+        <Image
+          alt="Current user avatar"
+          className="h-8 w-8 rounded-full sm:h-10 sm:w-10"
+          height="40"
+          src="/placeholder.svg?height=40&width=40"
+          width="40"
+        />
+        <div className="flex-1">
+          <textarea
+            className="min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 sm:text-base"
+            placeholder="Add a comment..."
+          />
         </div>
-        <button className="text-blue-500 hover:text-blue-600">Reply</button>
       </div>
-      <p className="text-gray-700">
-        This is a sample comment. Replace this with actual comment content.
-      </p>
-    </div>
+      <Button className="mt-4 w-full sm:w-auto">SEND</Button>
+    </Card>
   );
 }

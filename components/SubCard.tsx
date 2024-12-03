@@ -5,9 +5,9 @@ import { ChevronUp, ChevronDown } from "lucide-react";
 
 export default function SubCard() {
   return (
-    <Card className="ml-20 mt-4 max-w-2xl p-6">
-      <div className="ml-10 flex flex-col gap-6 md:flex-row">
-        <div className="flex flex-row items-center gap-4 md:flex-col md:gap-2">
+    <Card className="mt-4 max-w-xl p-4 sm:ml-20 sm:p-6">
+      <div className="flex flex-col gap-4 sm:ml-10 sm:flex-row sm:gap-6">
+        <div className="flex flex-row items-center gap-4 sm:flex-col sm:items-start sm:gap-2">
           <Button variant="ghost" size="icon" className="h-8 w-8">
             <ChevronUp className="h-4 w-4" />
           </Button>
@@ -19,20 +19,20 @@ export default function SubCard() {
         <div className="flex-1 space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Avatar className="h-8 w-8">
+              <Avatar className="h-6 w-6 sm:h-8 sm:w-8">
                 <AvatarImage src="/placeholder.svg" alt="@username" />
                 <AvatarFallback>UN</AvatarFallback>
               </Avatar>
               <div>
-                <p className="text-sm font-semibold">ramsesmiron</p>
+                <p className="text-xs font-semibold sm:text-sm">ramsesmiron</p>
                 <p className="text-xs text-muted-foreground">1 week ago</p>
               </div>
             </div>
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="text-xs sm:text-sm">
               Reply
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs text-muted-foreground sm:text-sm">
             I couldn&apos;t agree more with this. Everything looks incredible.
             Great job!
           </p>
