@@ -20,7 +20,7 @@ export default function CommentSection() {
           />
         </div>
       </div>
-      <Button className="mt-4 w-full sm:w-auto">SEND</Button>
+      <Button className="mt-4 w-full items-end sm:w-auto">SEND</Button>
     </Card>
   );
 }
